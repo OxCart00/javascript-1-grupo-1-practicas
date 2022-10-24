@@ -6,6 +6,9 @@ let mayor = 0;
 let frase1 = "Lol";
 let analisis1 = "";
 let validacion1 = 1;
+//e3
+let matriz1 = [[1,0,0],[0,1,1],[0,1,0]]
+let contador1 = 0;
 //Funciones
 function e1(a,b) {
   for (let i = 0; i < a.length; i++) {
@@ -38,7 +41,15 @@ function e2(a,b,c) {
     console.log("La frase:", a,"NO es palindromo");
   }
 }
-function e3() {
+function e3(a) {
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < a.length; j++) {
+      if (a[i][j] == 0) {
+        contador1 ++;
+      }
+    }    
+  }
+  console.log("La cantidad de ceros en la matriz es: ",contador1);
 }
 function e4() {
 }
@@ -48,7 +59,7 @@ function e5() {
 function main() {
   e1(lista1,mayor);
   e2(frase1,analisis1,validacion1);
-  e3();
+  e3(matriz1);
   e4();
   e5();
 }

@@ -2,14 +2,6 @@
 // e1
 let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
 let mayor = 0;
-// e2
-
-// e3
-
-// e4
-
-// e5
-
 //Funciones
 function e1(a) {
   for (let i = 0; i < lista1.length; i++) {

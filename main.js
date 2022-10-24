@@ -1,10 +1,22 @@
 // Variables
+// e1
+let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
+let mayor = 0;
 //e2
 let frase1 = "Lol";
 let analisis1 = "";
 let validacion1 = 1;
 //Funciones
-function e1() {
+function e1(a) {
+  for (let i = 0; i < lista1.length; i++) {
+    if (i == 0) {
+      mayor = lista1[i];
+    }
+    if (lista1 [i] > mayor) {
+      mayor = lista1 [i];
+    }
+  }
+  console.log(mayor);
 }
 function e2() {
   for (let i = 0; i < frase1.length; i++) {

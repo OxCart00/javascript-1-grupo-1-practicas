@@ -7,35 +7,35 @@ let frase1 = "Lol";
 let analisis1 = "";
 let validacion1 = 1;
 //Funciones
-function e1(a) {
-  for (let i = 0; i < lista1.length; i++) {
+function e1(a,b) {
+  for (let i = 0; i < a.length; i++) {
     if (i == 0) {
-      mayor = lista1[i];
+      b = a[i];
     }
-    if (lista1 [i] > mayor) {
-      mayor = lista1 [i];
+    if (a [i] > b) {
+      b = a [i];
     }
   }
-  console.log(mayor);
+  console.log(b);
 }
-function e2() {
-  for (let i = 0; i < frase1.length; i++) {
-    if (frase1[i] != " ") {
-      analisis1 += frase1[i];
+function e2(a,b,c) {
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] != " ") {
+      b += a[i];
     }    
   }
-  analisis1 = analisis1.toLowerCase();
-  let j = analisis1.length-1;
-  for (let i = 0; i < analisis1.length; i++) {
-    if (analisis1[i] != analisis1[j]) {
-      validacion1 = 0;
+  b = b.toLowerCase();
+  let j = b.length-1;
+  for (let i = 0; i < b.length; i++) {
+    if (b[i] != b[j]) {
+      c = 0;
     }
     j--;
   }
-  if (validacion1 == 1) {
-    console.log("La frase:", frase1,"SI es palindromo");    
+  if (c == 1) {
+    console.log("La frase:", a,"SI es palindromo");    
   }else{
-    console.log("La frase:", frase1,"NO es palindromo");
+    console.log("La frase:", a,"NO es palindromo");
   }
 }
 function e3() {
@@ -46,8 +46,8 @@ function e5() {
 }
 //Ejecucion de Funciones
 function main() {
-  e1();
-  e2();
+  e1(lista1,mayor);
+  e2(frase1,analisis1,validacion1);
   e3();
   e4();
   e5();

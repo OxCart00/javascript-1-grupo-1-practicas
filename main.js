@@ -1,4 +1,7 @@
 // Variables
+//e5
+let largo = 8;
+let patron = "";
 //Funciones
 function e1() {
 }
@@ -8,7 +11,11 @@ function e3() {
 }
 function e4() {
 }
-function e5() {
+function e5(a,b) {
+  for (let i = 1; i <= a; i++) {
+    b += "* ";
+    console.log(b);
+  }
 }
 //Ejecucion de Funciones
 function main() {
@@ -16,6 +23,6 @@ function main() {
   e2();
   e3();
   e4();
-  e5();
+  e5(largo,patron);
 }
 main();

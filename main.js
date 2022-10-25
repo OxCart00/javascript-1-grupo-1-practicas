@@ -25,7 +25,7 @@ function e1(a,b) {
       b = a [i];
     }
   }
-  console.log(b);
+  console.log("El numero mayor es:",b,"\n");
 }
 function e2(a,b,c) {
   for (let i = 0; i < a.length; i++) {
@@ -42,9 +42,9 @@ function e2(a,b,c) {
     j--;
   }
   if (c == 1) {
-    console.log("La frase:", a,"SI es palindromo");    
+    console.log("La frase:", a,"SI es palindromo\n");    
   }else{
-    console.log("La frase:", a,"NO es palindromo");
+    console.log("La frase:", a,"NO es palindromo\n");
   }
 }
 function e3(a) {
@@ -55,7 +55,7 @@ function e3(a) {
       }
     }    
   }
-  console.log("La cantidad de ceros en la matriz es: ",contador1);
+  console.log("La cantidad de ceros en la matriz es: ",contador1,"\n");
 }
 function e4(a,b) {
   for (let i = 0; i < a.length; i++) {
@@ -74,12 +74,13 @@ function e4(a,b) {
     }
   }
   if (b.length > 0) {
-    console.log("Los numeros repetidos son: ",b);
+    console.log("Los numeros repetidos son: ",b,"\n");
   }else{
-    console.log("No se encontraron numeros repetidos en la lista de numeros recibidos");
+    console.log("No se encontraron numeros repetidos en la lista de numeros recibidos\n");
   }
 }
 function e5(a,b) {
+  console.log("Triangulo tamaño:",a,"\n");
   for (let i = 1; i <= a; i++) {
     b += "* ";
     console.log(b);
@@ -87,10 +88,15 @@ function e5(a,b) {
 }
 //Ejecucion de Funciones
 function main() {
+  console.log("Respuesta Ejercicio #1\n");
   e1(lista1,mayor);
+  console.log("Respuesta Ejercicio #2\n");
   e2(frase1,analisis1,validacion1);
+  console.log("Respuesta Ejercicio #3\n");
   e3(matriz1);
+  console.log("Respuesta Ejercicio #4\n");
   e4(lista2,repetidos);
+  console.log("Respuesta Ejercicio #5\n");
   e5(largo,patron);
 }
 main();

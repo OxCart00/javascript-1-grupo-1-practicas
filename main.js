@@ -1,4 +1,7 @@
 // Variables
+//e4
+let lista2 = [2,3,4,5,6,12,-1,-24,0,2,2,2,3,5,4,-1,2];
+let repetidos = [];
 // e1
 let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
 let mayor = 0;
@@ -51,7 +54,27 @@ function e3(a) {
   }
   console.log("La cantidad de ceros en la matriz es: ",contador1);
 }
-function e4() {
+function e4(a,b) {
+  for (let i = 0; i < a.length; i++) {
+    let repeticiones = 0;
+    for (let j = 0; j < a.length; j++) {
+      if (a[i] == a[j] && i != j && repeticiones == 0) {
+        b.push(a[i]);
+        a.splice(j,1);
+        j--;
+        repeticiones = 1;
+      }
+      if (a[i] == a[j] && i != j && repeticiones == 1) {
+        a.splice(j,1);
+        j--;
+      }
+    }
+  }
+  if (b.length > 0) {
+    console.log("Los numeros repetidos son: ",b);
+  }else{
+    console.log("No se encontraron numeros repetidos en la lista de numeros recibidos");
+  }
 }
 function e5() {
 }
@@ -60,7 +83,7 @@ function main() {
   e1(lista1,mayor);
   e2(frase1,analisis1,validacion1);
   e3(matriz1);
-  e4();
+  e4(lista2,repetidos);
   e5();
 }
 main();

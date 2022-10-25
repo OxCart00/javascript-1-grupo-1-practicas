@@ -1,7 +1,4 @@
 // Variables
-//e4
-let lista2 = [2,3,4,5,6,12,-1,-24,0,2,2,2,3,5,4,-1,2];
-let repetidos = [];
 // e1
 let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
 let mayor = 0;
@@ -12,6 +9,12 @@ let validacion1 = 1;
 //e3
 let matriz1 = [[1,0,0],[0,1,1],[0,1,0]]
 let contador1 = 0;
+//e4
+let lista2 = [2,3,4,5,6,12,-1,-24,0,2,2,2,3,5,4,-1,2];
+let repetidos = [];
+//e5
+let largo = 8;
+let patron = "";
 //Funciones
 function e1(a,b) {
   for (let i = 0; i < a.length; i++) {
@@ -76,7 +79,11 @@ function e4(a,b) {
     console.log("No se encontraron numeros repetidos en la lista de numeros recibidos");
   }
 }
-function e5() {
+function e5(a,b) {
+  for (let i = 1; i <= a; i++) {
+    b += "* ";
+    console.log(b);
+  }
 }
 //Ejecucion de Funciones
 function main() {
@@ -84,6 +91,6 @@ function main() {
   e2(frase1,analisis1,validacion1);
   e3(matriz1);
   e4(lista2,repetidos);
-  e5();
+  e5(largo,patron);
 }
 main();

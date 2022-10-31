@@ -1,102 +1,89 @@
 // Variables
 // e1
-let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
-let mayor = 0;
+let n1 = 15;
 //e2
-let frase1 = "Lol";
-let analisis1 = "";
-let validacion1 = 1;
+let n2 = 23;
 //e3
-let matriz1 = [[1,0,0],[0,1,1],[0,1,0]]
-let contador1 = 0;
+let p1 = "Oscar";
+let reversa = "";
 //e4
-let lista2 = [2,3,4,5,6,12,-1,-24,0,2,2,2,3,5,4,-1,2];
-let repetidos = [];
+let l1 = ["a","e","i","o","u"];
+let p2 = "esta es mi palabra"
+let pilibri = "";
 //e5
-let largo = 8;
-let patron = "";
+let p3 = "avanzando";
+let p3orden = "";
+let abc = "a,b,c,d,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z";
 //Funciones
-function e1(a,b) {
-  for (let i = 0; i < a.length; i++) {
-    if (i == 0) {
-      b = a[i];
-    }
-    if (a [i] > b) {
-      b = a [i];
-    }
-  }
-  console.log("El numero mayor es:",b,"\n");
-}
-function e2(a,b,c) {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] != " ") {
-      b += a[i];
-    }    
-  }
-  b = b.toLowerCase();
-  let j = b.length-1;
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] != b[j]) {
-      c = 0;
-    }
-    j--;
-  }
-  if (c == 1) {
-    console.log("La frase:", a,"SI es palindromo\n");    
+function e1(a) {
+  if (a % 2 == 0) {
+    console.log("El numero es PAR");
   }else{
-    console.log("La frase:", a,"NO es palindromo\n");
+    console.log("El numero es IMPAR");
   }
-}
-function e3(a) {
-  for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < a.length; j++) {
-      if (a[i][j] == 0) {
-        contador1 ++;
-      }
-    }    
-  }
-  console.log("La cantidad de ceros en la matriz es: ",contador1,"\n");
-}
-function e4(a,b) {
-  for (let i = 0; i < a.length; i++) {
-    let repeticiones = 0;
-    for (let j = 0; j < a.length; j++) {
-      if (a[i] == a[j] && i != j && repeticiones == 0) {
-        b.push(a[i]);
-        a.splice(j,1);
-        j--;
-        repeticiones = 1;
-      }
-      if (a[i] == a[j] && i != j && repeticiones == 1) {
-        a.splice(j,1);
-        j--;
-      }
-    }
-  }
-  if (b.length > 0) {
-    console.log("Los numeros repetidos son: ",b,"\n");
+  if (a % 3 == 0) {
+    console.log("El numero es divisible entre 3");
   }else{
-    console.log("No se encontraron numeros repetidos en la lista de numeros recibidos\n");
+    console.log("El numero NO es divisible entre 3");
   }
+  if (a % 5 == 0) {
+    console.log("El numero es divisible entre 5");
+  }else{
+    console.log("El numero NO es divisible entre 5");
+  }
+  console.log("");
 }
-function e5(a,b) {
-  console.log("Triangulo tamaño:",a,"\n");
+function e2(a) {
   for (let i = 1; i <= a; i++) {
-    b += "* ";
-    console.log(b);
+    console.log(i);
   }
+}
+function e3(a,b) {
+  let i = a.length-1;
+  while (i >= 0) {
+    b += (a[i]);
+    i --;
+  }
+  console.log(a," | ",b);
+}
+function e4(a,b,c) {
+  let validacion = 0;
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < c.length; j++) {
+      if (a[i] == c[j]) {
+        validacion = 1;
+      }
+    }
+    if (validacion == 1) {
+      b += "i";
+    }else{
+      b += a[i];
+    }
+    validacion = 0;
+  }
+  console.log(a, " | ",b);
+}
+function e5(a,b,c) {
+  for (let i = 0; i < c.length; i++) {
+    for (let j = 0; j < a.length; j++) {
+      if (a[j] == c[i]) {
+        b += a[j];
+      }
+    }
+  }
+  console.log(a,b);
 }
 //Ejecucion de Funciones
 function main() {
   console.log("Respuesta Ejercicio #1\n");
-  e1(lista1,mayor);
+  e1(n1);
   console.log("Respuesta Ejercicio #2\n");
-  e2(frase1,analisis1,validacion1);
+  e2(n2);
   console.log("Respuesta Ejercicio #3\n");
-  e3(matriz1);
+  e3(p1,reversa);
   console.log("Respuesta Ejercicio #4\n");
-  e4(lista2,repetidos);
+  e4(p2,pilibri,l1);
   console.log("Respuesta Ejercicio #5\n");
-  e5(largo,patron);
+  e5(p3,p3orden,abc);
 }
 main();

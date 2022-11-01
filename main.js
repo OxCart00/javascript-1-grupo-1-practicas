@@ -1,7 +1,7 @@
 // Variables
 // e1
-let lista1 = [-1,-2,-3,-14,-5,-6,-7,1,-2,24];
-let mayor = 0;
+let n1 = 7;
+let f1 = 0;
 //e2
 let frase1 = "Lol";
 let analisis1 = "";
@@ -9,7 +9,7 @@ let validacion1 = 1;
 //e3
 let n3 = 18;
 //Funciones
-function e1(a,b) {
+function e1(a) {
   for (let i = 0; i < a.length; i++) {
     if (i == 0) {
       b = a[i];

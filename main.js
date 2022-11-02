@@ -18,11 +18,10 @@ function e1(a,b) {
   }
 }
 function e2(a) {
-  if (a <= 1 ) {
+  if (a == 0 ) {
     console.log("El factorial de",a,"es",1);
-  }else{
-    return (a*e2(a-1));
   }
+  return a*e2(a-1);
 }
 function e3(a) {
   if ( (a & 1) == 0) {

@@ -19,7 +19,7 @@ function e1(a,b) {
 }
 function e2(a) {
   if (a == 0 ) {
-    console.log("El factorial de",a,"es",1);
+    return 1;
   }
   return a*e2(a-1);
 }
@@ -35,7 +35,7 @@ function main() {
   console.log("Respuesta Ejercicio #1\n");
   e1(n1,f1);
   console.log("Respuesta Ejercicio #2\n");
-  e2(n2);
+  console.log(e2(n2));
   console.log("Respuesta Ejercicio #3\n");
   e3(n3);
 }

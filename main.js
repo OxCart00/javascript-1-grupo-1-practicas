@@ -1,43 +1,27 @@
 // Variables
 // e1
-let n1 = 7;
-let f1 = 0;
+let n1 = 5;
+let f1 = 1;
 //e2
-let frase1 = "Lol";
-let analisis1 = "";
-let validacion1 = 1;
+let n2 = 5;
 //e3
 let n3 = 18;
 //Funciones
-function e1(a) {
-  for (let i = 0; i < a.length; i++) {
-    if (i == 0) {
-      b = a[i];
-    }
-    if (a [i] > b) {
-      b = a [i];
-    }
-  }
-  console.log("El numero mayor es:",b,"\n");
-}
-function e2(a,b,c) {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] != " ") {
-      b += a[i];
-    }    
-  }
-  b = b.toLowerCase();
-  let j = b.length-1;
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] != b[j]) {
-      c = 0;
-    }
-    j--;
-  }
-  if (c == 1) {
-    console.log("La frase:", a,"SI es palindromo\n");    
+function e1(a,b) {
+  if (a == 0) {
+    console.log("el factorial de",a,"es",1);
   }else{
-    console.log("La frase:", a,"NO es palindromo\n");
+    for (let i = 2; i <= a; i++) {
+      b *= i;
+    }
+    console.log("El factorial de",a,"es",b,"\n");
+  }
+}
+function e2(a) {
+  if (a <= 1 ) {
+    console.log("El factorial de",a,"es",1);
+  }else{
+    return (a*e2(a-1));
   }
 }
 function e3(a) {
@@ -50,9 +34,9 @@ function e3(a) {
 //Ejecucion de Funciones
 function main() {
   console.log("Respuesta Ejercicio #1\n");
-  e1(lista1,mayor);
+  e1(n1,f1);
   console.log("Respuesta Ejercicio #2\n");
-  e2(frase1,analisis1,validacion1);
+  e2(n2);
   console.log("Respuesta Ejercicio #3\n");
   e3(n3);
 }

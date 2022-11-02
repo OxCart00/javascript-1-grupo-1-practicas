@@ -5,7 +5,7 @@ let f1 = 1;
 //e2
 let n2 = 5;
 //e3
-let n3 = 18;
+let n3 = 17;
 //Funciones
 function e1(a,b) {
   if (a == 0) {
@@ -23,20 +23,29 @@ function e2(a) {
   }
   return a*e2(a-1);
 }
-function e3(a) {
-  if ( (a & 1) == 0) {
-    console.log("El numero",a,"es PAR");
-  }else{
-    console.log("El numero",a,"es IMPAR");
+function e3a(a) {
+  if (a == 0){
+    return 1;
   }
+  return e3b(a-1);
+}
+function e3b(a) {
+  if (a == 0) {
+    return 0;
+  }
+  return e3a(a-1)
 }
 //Ejecucion de Funciones
 function main() {
   console.log("Respuesta Ejercicio #1\n");
   e1(n1,f1);
   console.log("Respuesta Ejercicio #2\n");
-  console.log(e2(n2));
+  console.log("El factorial de",n2,"es:",e2(n2),"\n");
   console.log("Respuesta Ejercicio #3\n");
-  e3(n3);
+  if (e3a(n3) == 1) {
+    console.log("El numero",n3,"es par\n");
+  }else if (e3b(n3) == 1) {
+    console.log("El numero",n3,"es impar\n"); 
+  }
 }
 main();

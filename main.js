@@ -1,16 +1,16 @@
 // Variables
 //E1
-let factorial_number = 6;
+let factorial_number = 7;
 
 // E2
-let year = 2017;
+let year = 1876;
 
 // E3
 let sentence = "Viva el futbol Siuuuuuuuuu";
 let character = "U";
 
 // E4
-let secret_number = 12;
+let secret_number = 77;
 
 // E5
 let space_sentence = "Draco dormiens nunquam titillandus";
@@ -26,7 +26,7 @@ function E1(a) {
 
 // E2
 function E2(a) {
-  if (((a%4 == 0) & (a%100 != 0)) || (a%400==0)) {
+  if (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0)) {
     console.log("El año",a,"SI es bisiesto\n");
   }else{
     console.log("El año",a,"NO es bisiesto\n");
@@ -35,46 +35,46 @@ function E2(a) {
 
 // E3
 function E3(a,b) {
-  let contador = 0;
+  let counter = 0;
   a = a.toLowerCase();
   b = b.toLowerCase();
   for (let i = 0; i < a.length; i++) {
     if (a[i] == b) {
-      contador ++;
+      counter ++;
     }
   }
-  console.log("El caracter",b,"se repite",contador,"veces en:",a,"\n");
+  console.log("El caracter",b,"se repite",counter,"veces en:",a,"\n");
 }
 
 // E4
 function E4(a) {
   let min = 0;
   let max = 100;
-  let i = Math.floor(Math.random() * (max - min + 1) + min);
-  while (a != i && i != 0) {
-    if (i > a) {
-    console.log(i,"es mayor que el numero secreto");
+  let tries = Math.floor(Math.random() * (max - min + 1) + min);
+  while (tries != a && tries != 0) {
+    if (tries > a) {
+    console.log(tries,"es mayor que el numero secreto");
     }else{
-    console.log(i,"es menor que el numero secreto");
+    console.log(tries,"es menor que el numero secreto");
     }
-    i = Math.floor(Math.random() * (max - min + 1) + min);
+    tries = Math.floor(Math.random() * (max - min + 1) + min);
   }
-  if (i == 0) {
+  if (tries == 0) {
     console.log("Programa detenido\n");
   }else{
-    console.log(i,"Si es el numero secreto\n");
+    console.log(tries,"Si es el numero secreto\n");
   }
 }
 
 // E5
 function E5(a) {
-  let sin_espacios = "";
+  let without_spaces = "";
   for (let i = 0; i < a.length; i++) {
     if (a[i] != " ") {
-      sin_espacios += a[i];
+      without_spaces += a[i];
     }
   }
-  console.log("La palabra sin espacios es:",sin_espacios,"\n");
+  console.log("La palabra sin espacios es:",without_spaces,"\n");
 }
 
 // LLamado de funciones
